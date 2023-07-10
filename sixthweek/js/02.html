@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			* {
+				padding: 0;
+				margin: 0;
+			}
+
+			#box {
+				background-color: rgb(221, 217, 217);
+				width: 950px;
+			}
+
+			/* 清除图片之间的间隙 */
+			#pictures {
+				background-color: rgb(235, 235, 235);
+				font-size: 0;
+				line-height: 0;
+				display: flex;
+				flex-direction: row;
+				justify-content: space-between;
+			}
+
+			#navigation {
+				clear: both;
+			}
+
+			#main {
+				padding-top: 10px;
+				overflow: hidden;
+				border-bottom: solid gray 1px;
+			}
+
+			#background {
+				background-color: #000;
+				width: 600px;
+				height: 350px;
+				margin-left: 10px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+			}
+
+			#left {
+				float: left;
+			}
+
+			ul {
+				list-style-type: none;
+				background-color: rgb(56, 56, 56);
+				overflow: hidden;
+				width: 950px;
+			}
+
+			ul li {
+				color: white;
+				float: left;
+				padding: 10px 15px;
+				border-right: solid 2px;
+				border-image: linear-gradient(#000, white, #000)2 30;
+			}
+
+			#right {
+				float: right;
+			}
+
+			#mixture {
+				position: relative;
+				display: inline-block;
+			}
+
+			#container {
+				color: white;
+				background-image: url("../img/02/icon-03.jpg");
+				padding-left: 10px;
+				padding-right: 150px;
+				height: 29px;
+				line-height: 29px;
+			}
+
+			#content {
+				background-color: rgb(206, 212, 219);
+				overflow: hidden;
+			}
+
+			.lv {
+				border: 1px white solid;
+				margin: 10px 5px;
+			}
+
+			#icon-01,
+			#icon-02 {
+				font-size: smaller;
+				margin: 2px;
+			}
+
+			#icon-01::before {
+				content: url("../img/02/icon-01.jpg");
+			}
+
+			#icon-02::before {
+				content: url("../img/02/icon-02.jpg");
+			}
+
+			#title {
+				font-weight: bold;
+				text-indent: 0.5em;
+				font-size: small;
+			}
+
+			#titlelast {
+				text-indent: 2em;
+				font-weight: bolder;
+			}
+
+			#block1,
+			#block3 {
+				display: block;
+				float: left;
+			}
+
+			#block2,
+			#block4 {
+				display: block;
+				float: right;
+			}
+
+			#footer {
+				text-align: center;
+				padding-top: 10px;
+				padding-bottom: 20px;
+			}
+		</style>
+	</head>
+	<body>
+
+		<div id="box">
+			<header>
+				<div id="pictures">
+					<img src="../img/02/forumLogo.jpg">
+					<img src="../img/02/forumLogo_r.jpg">
+				</div>
+			</header>
+			<menu>
+				<div id="navigation">
+					<ul>
+						<li>首&emsp;页</li>
+						<li>青鸟知识库</li>
+						<li>青鸟论坛</li>
+						<li>学员问答</li>
+						<li>青鸟圈子</li>
+						<li>实时课堂</li>
+						<li>客户端下载</li>
+						<li>帮助中心</li>
+					</ul>
+				</div>
+			</menu>
+			<div id="main">
+				<div id="left">
+					<div id="background">
+						<img src="../img/02/video.jpg">
+					</div>
+					<div id="wenzi">
+						<p id="titlelast">
+							青鸟视频--携手共同进步
+						<p>
+							<span id="icon-01">时长:80秒</span>
+							<span id="icon-02">点击:541563</span>
+					</div>
+				</div>
+				<div id="right">
+					<div id="mixture">
+						<div id="container">精彩视频</div>
+						<div id="content">
+							<div id="block1">
+								<div id="img1">
+									<img src="../img/02/video-01.jpg" class="lv">
+								</div>
+								<div>
+									<p id="title">携手共同进步</p>
+									<p id="icon-01">时长:80秒</p>
+									<p id="icon-02">点击:541563</p>
+								</div>
+							</div>
+							<div id="block2">
+								<div id="img2">
+									<img src="../img/02/video-02.jpg" class="lv">
+								</div>
+								<div>
+									<p id="title">美丽的起点</p>
+									<p id="icon-01">时长:120秒</p>
+									<p id="icon-02">点击:657842</p>
+								</div>
+							</div>
+							<div></div>
+							<div id="block3">
+								<div id="img3">
+									<img src="../img/02/video-03.jpg" class="lv">
+								</div>
+								<div>
+									<p id="title">努力的过程</p>
+									<p id="icon-01">时长:50秒</p>
+									<p id="icon-02">点击:912380</p>
+								</div>
+							</div>
+							<div id="block4">
+								<div id="img4">
+									<img src="../img/02/video-04.jpg" class="lv">
+								</div>
+								<div>
+									<p id="title">享受丰硕的成果</p>
+									<p id="icon-01">时长:60秒</p>
+									<p id="icon-02">点击:47651280</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="footer">
+				<div>Copyright @ 1999-2014 Beijing Aptech Beida Jade Bird Information Technology Co.,Ltd
+				</div>
+				<div>
+					北大青鸟IT教育 北京阿博泰克北大青鸟信息技术有限公司 版权所有
+				</div>
+			</div>
+		</div>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			#title {
+				width: 450px;
+			}
+
+			#content {
+				background-color: #1C85B4;
+				width: 450px;
+				height: 500px;
+			}
+
+			#ok {
+				text-align: center;
+			}
+
+			img {}
+		</style>
+	</head>
+	<body>
+		<div id="ok">
+			<div id="main">
+				<div id="title">
+					<img src="../img/banner.jpg">
+				</div>
+				<div id="content">
+					<form action="" method="" name='myform'>
+						<select name="" id='selgame' onchange="changegame()">
+							<option value="">--游戏分类--</option>
+							<option value="纸牌游戏">纸牌游戏</option>
+							<option value="棋类游戏">棋类游戏</option>
+							<option value="其他游戏">其他游戏</option>
+						</select>
+						<select name="" id='gamename'>
+							<option value="">---游戏名称---</option>
+						</select>
+					</form>
+					<script type="text/javascript">
+						function changegame() {
+							var game = document.getElementById('selgame').value;
+							var gamename = document.getElementById('gamename');
+							gamename.options.length = 0;
+							switch (game) {
+								case '纸牌游戏':
+									gamename.add(new Option('斗地主', '斗地主'), null);
+									gamename.add(new Option('拖拉机', '拖拉机'), null);
+									gamename.add(new Option('桥牌', '桥牌'), null);
+									gamename.add(new Option('拱猪', '拱猪'), null);
+									gamename.add(new Option('打百分', '打百分'), null);
+									break;
+								case '棋类游戏':
+									gamename.add(new Option('军棋', '军棋'), null);
+									gamename.add(new Option('跳棋', '跳棋'), null);
+									gamename.add(new Option('五子棋', '五子棋'), null);
+									gamename.add(new Option('围棋', '围棋'), null);
+									gamename.add(new Option('中国象棋', '中国象棋'), null);
+									gamename.add(new Option('国际象棋', '国际象棋'), null);
+									gamename.add(new Option('飞行棋', '飞行棋'), null);
+									gamename.add(new Option('黑白棋', '黑白棋'), null);
+									break;
+								case '其他游戏':
+									gamename.add(new Option('连连看', '连连看'), null);
+									gamename.add(new Option('俄罗斯方块', '俄罗斯方块'), null);
+									gamename.add(new Option('麻将', '麻将'), null);
+									gamename.add(new Option('台球', '台球'), null);
+									gamename.add(new Option('挑错', '挑错'), null);
+									break;
+							}
+						}
+					</script>
+					<img src="../img/login.gif">
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

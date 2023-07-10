@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<script>
+		function adjustframe() {
+			var idname = document.getElementsByTagName("iframe");
+			// console.log(idname);
+			// console.log(document.body.scrollHeight);
+			for (var i = 0; i < idname.length; i++) {
+				var ifm = document.getElementById(idname[i].id);
+				// ifm.height = document.documentElement.clientHeight;
+				ifm.width = document.documentElement.clientWidth;
+				console.log(ifm.height);
+				console.log(ifm.width);
+			}
+		}
+	</script>
+	<body>
+		<iframe id="Google" src="./subframe/Google.htm" frameborder="0" height="250" onload="adjustframe()"></iframe>
+		<p style="text-align: center;"><a href="">天下大势</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="">分久必合</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="">合久必分</a></p>
+		<iframe id="foot" src="./subframe/foot.htm" frameborder="0" onload="adjustframe()" height="250"></iframe>
+	</body>
+</html>

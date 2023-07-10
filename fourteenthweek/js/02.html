@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<form action="" method="" name='myform'>
+			<select name="" id='selProvince' onchange="changeCity()">
+				<option value="">---选择省份---</option>
+				<option value="河南省">河南省</option>
+				<option value="河北省">河北省</option>
+				<option value="江苏省">江苏省</option>
+			</select>
+			<select name="" id='selCity'>
+				<option value="">---选择城市---</option>
+			</select>
+		</form>
+		<script type="text/javascript">
+			function changeCity() {
+				var province = document.getElementById('selProvince').value;
+				// console.log(province);
+				var city = document.getElementById('selCity');
+				city.options.length = 0; //清除se'lCity列表里的选项
+				switch (province) {
+					case '河南省':
+						city.add(new Option("郑州市", "郑州市"), null);
+						city.add(new Option("洛阳市", "洛阳市"), null);
+						break;
+					case '河北省':
+						city.add(new Option("石家庄市", "石家庄市"), null);
+						city.add(new Option("保定市", "保定市"), null);
+						break;
+					case '江苏省':
+						city.add(new Option("南京市", "南京市"), null);
+						city.add(new Option("苏州市", "苏州市"), null);
+						break;
+				}
+			}
+		</script>
+	</body>
+</html>
